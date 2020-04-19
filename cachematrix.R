@@ -1,8 +1,8 @@
 #makeCacheMatrix: This function creates a special "matrix" object that can cache its inverse.
-#set the value of the vector
-#get the value of the vector
-#set the value of the mean
-#get the value of the mean
+#1/set the value of the vector
+#2/get the value of the vector
+#3/set the value of the mean
+#4/get the value of the mean
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
   set <- function(y) {
@@ -17,6 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
        setinverse = setinverse,
        getinverse = getinverse)
 }
+
 
 #cacheSolve: This function computes the inverse of the special "matrix" returned 
 # by makeCacheMatrix above. If the inverse has already been calculated 
@@ -33,3 +34,4 @@ cacheSolve <- function(x, ...) {
   x$setinverse(i)
   i
 }
+
